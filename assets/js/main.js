@@ -377,6 +377,52 @@ if(page=="index.html" || page==""){
 //meni.html
 if(page=="meni.html"){
 //jelovnik;
+const breakfastMenuItems = [
+    {
+        id: 1,
+        title: "Engleski doručak",
+        price: "350RSD",
+        img: "assets/img/dorucak1.jpg",
+        description: "pržena jaja, kobasica, paradajz",
+    },
+    {
+        id: 2,
+        title: "Prženice",
+        price: "300RSD",
+        img: "assets/img/dorucak2.jpg",
+        description: "tost hleb,panir masa",
+    },
+    {
+        id: 3,
+        title: "Sendvič sa pršutom",
+        price: "390RSD",
+        img: "assets/img/dorucak3.jpg",
+        description: "hleb, pršuta, kačkavalj, paradajz",
+    },
+    {
+        id: 4,
+        title: "Wrap sa piletinom",
+        price: "430RSD",
+        img: "assets/img/dorucak4.jpg",
+        description: "tortilja, zel.salata, piletina, kačkavalj",
+    },
+    {
+        id: 5,
+        title: "Zest doručak",
+        price: "320RSD",
+        img: "assets/img/dorucak5.jpg",
+        description: "pržena jaja, povrće",
+    },
+    {
+        id: 6,
+        title: "Kaša",
+        price: "290RSD",
+        img: "assets/img/dorucak6.jpg",
+        description: "ovsena kaša, voće",
+    },
+
+]
+
 
 }
 
