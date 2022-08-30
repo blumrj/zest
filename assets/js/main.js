@@ -27,41 +27,6 @@ var swiper = new Swiper(".swiperDishes", {
     scrollbar: false,
 });
 
-// var swiper = new Swiper(".swiperImageGallery", {
-//     slidesPerView: 1,
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     rewind: true,
-// });
-
-// var swiper = new Swiper(".swiperMenu", {
-//     slidesPerView: 3,
-//     init: true,
-//     createElements: true,
-//     enabled: true,
-//     nested: true,
-//     observer: true,
-//     on: {
-//         init: function () {
-//           console.log('swiper initialized');
-//         },
-//       },
-//         grid: {
-//           rows: 1,
-//         },
-//         spaceBetween: 30,
-//         breakpoints: {
-//           830: {
-//             slidesPerView: 3,
-//             grid: {
-//               rows: 2,
-//             },
-//           }
-//         }
-// })
-
 //scrollify
 $(document).ready(function($) {
     $.scrollify({
@@ -371,12 +336,10 @@ if(page=="index.html" || page==""){
         slide.appendChild(img);
         slide.appendChild(descriptionDiv)
         swiperWrapper.appendChild(slide)
-
     }
 }
 //meni.html
 if(page=="meni.html"){
-//jelovnik;
 
 //breakfast
 const breakfastMenuItems = [
