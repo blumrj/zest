@@ -70,6 +70,9 @@ h2{
 .w-80{
     width: 80%;
 }
+.h-80{
+    height: 80vh;
+}
 .w-50{
     width: 50%;
 }
@@ -135,6 +138,9 @@ li .activePage > i{
 }
 .mt-7{
     margin-top: 7vh;
+}
+.mt-12{
+    margin-top: 12vh;
 }
 
 /* btn */ 
@@ -374,7 +380,11 @@ nav{
     margin-bottom: 5vh;
 }
 
-/* meni */ 
+/* menu */ 
+.menu-item{
+    width: 30%;
+    height: 40%;
+}
 .menuSection{
     height: auto !important;
     width: 7vw;
@@ -563,7 +573,6 @@ nav{
     #navbar{
         width: 100vw;
     }
-    
     .active{
         border: none;
     }
@@ -573,6 +582,17 @@ nav{
     }
     .sadrzaj img, .sadrzaj div{
         width: 45%;
+    }
+    /*menu*/
+    .menu-item{
+        width: 50%;
+        height: 30%;
+    }
+    .menu-item .img-fluid, .menu-item div{
+        width: 90%;
+    }
+    .menu-item:nth-child(even){
+        align-items: flex-end;
     }
     #contact-div{
         flex-direction: column;
@@ -638,10 +658,10 @@ nav{
 }
 
 /* gallery */
-.img-fluid{
+/* .img-fluid{
     max-width: 95%;
     height: fit-content;
-} 
+}  */
 
 #landing-page-icons{
 position: absolute;

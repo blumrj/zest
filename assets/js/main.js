@@ -378,60 +378,6 @@ if(page=="index.html" || page==""){
 if(page=="meni.html"){
 //jelovnik;
 
-//dorucak
-var breakfastImgArray = ["assets/img/jelodana.png", "assets/img/jelodana.png", "assets/img/jelodana.png", "assets/img/jelodana.png", "assets/img/jelodana.png", "assets/img/jelodana.png"];
-var breakfastName = ["Engleski doručak", "Prženice", "Sendvič sa pršutom", "Wrap sa piletinom", "Engleski dorucak", "Engleski dorucak"];
-var breakfastIngredients = [
-    ["pržena jaja", "kobasica", "paradajz"], 
-    ["tost hleb", "panir masa"],
-    ["hleb", "pršuta", "kačkavalj", "paradajz"],
-    ["tortilja", "zel.salata", "piletina", "kačkavalj"],
-    ["pržena jaja", "kobasica", "paradajz"],
-    ["pržena jaja", "kobasica", "paradajz"], 
-];
-var breakfastPrice = ["350 RSD", "300 RSD", "390 RSD", "430 RSD", "350 RSD", "350 RSD"];
-
-//f-ja za pravljenje menija
-function MenuCourses( images, courseName, ingredients, price){
-        // swiper menu
-        var swiperMenu = document.querySelector(".swiperMenu");
-        swiperMenu.appendChild(swiperWrapper);
-        //pravljenje slajdova
-        for(let i = 0; i<images.length; i++){
-            //pravljenje slajda i dodavanje wrapperu
-            var slide = document.createElement("div");
-            slide.classList.add("swiper-slide", "d-flex", "flex-direction-column");
-            swiperWrapper.appendChild(slide);
-            //pravljenje slike i dodavanje slajdu
-            var img = document.createElement("img");
-            img.src = images[i];
-            img.alt = courseName[i];
-            img.classList.add("img-fluid", "w-50");
-            slide.appendChild(img);
-            // pravljenje dodatnog diva i dodavanje slajdu
-            var additionalDiv = document.createElement("div");
-            additionalDiv.classList.add("pl-1");
-            slide.appendChild(additionalDiv);
-            // pravljenje h3
-            var h3 = document.createElement("h3");
-            h3.classList.add("pb-1");
-            h3.innerHTML = courseName[i];
-            additionalDiv.appendChild(h3);
-            //p sa sastojcima
-            var p1 = document.createElement("p");
-            p1.innerHTML = ingredients[i];
-            additionalDiv.appendChild(p1);
-            //p sa cenom
-            var p2 = document.createElement("p");
-            p2.innerHTML = price[i];
-            additionalDiv.appendChild(p2);
-        }
-        var main = document.querySelector("#main");
-        main.appendChild(part);
-
-    }
-
-   swiper.on("init", MenuCourses( breakfastImgArray, breakfastName, breakfastIngredients, breakfastPrice));
 }
 
 //kontakt 
