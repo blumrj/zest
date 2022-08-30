@@ -377,6 +377,8 @@ if(page=="index.html" || page==""){
 //meni.html
 if(page=="meni.html"){
 //jelovnik;
+
+//breakfast
 const breakfastMenuItems = [
     {
         id: 1,
@@ -420,9 +422,175 @@ const breakfastMenuItems = [
         img: "assets/img/dorucak6.jpg",
         description: "ovsena kaša, voće",
     },
-
 ]
+var breakfastMenuDiv = document.querySelector("#breakfastMenu");
 
+//main courses
+const MainCoursesMenuItems = [
+    {
+        id: 1,
+        title: "Carbonara",
+        price: "700RSD",
+        img: "assets/img/gjelo1.jpg",
+        description: "pančeta, jaja, parmezan, beli luk, belo vino",
+    },
+    {
+        id: 2,
+        title: "Taljata sa pomfritom",
+        price: "640RSD",
+        img: "assets/img/gjelo3.jpg",
+        description: "biftek, pomfrit, ruzmarin, majčina dušica",
+    },
+    {
+        id: 3,
+        title: "Bolognese",
+        price: "700RSD",
+        img: "assets/img/gjelo2.jpg",
+        description: "mleveno meso, pelat, parmezan, začini",
+    },
+    {
+        id: 4,
+        title: "Piletina sa povrćem",
+        price: "590RSD",
+        img: "assets/img/gjelo4.jpg",
+        description: "piletina, kus kus, povrće",
+    },
+    {
+        id: 5,
+        title: "Zest ručak",
+        price: "800RSD",
+        img: "assets/img/gjelo5.jpg",
+        description: "piletina, povrće",
+    },
+    {
+        id: 6,
+        title: "Kaša",
+        price: "290RSD",
+        img: "assets/img/dorucak6.jpg",
+        description: "ovsena kaša, voće",
+    },
+]
+var mainCoursesMenuDiv = document.querySelector("#mainCoursesMenu");
+
+//salads
+const saladsMenuItems = [
+    {
+        id: 1,
+        title: "Cezar salata",
+        price: "670RSD",
+        img: "assets/img/salata1.jpg",
+        description: "zelena salata, piletina, paradajz, peršun",
+    },
+    {
+        id: 2,
+        title: "Grčka salata",
+        price: "400RSD",
+        img: "assets/img/salata2.jpg",
+        description: "paradajz, masline, krastavac, paprika, feta sir, origano",
+    },
+    {
+        id: 3,
+        title: "Biftek salata",
+        price: "390RSD",
+        img: "assets/img/salata3.jpg",
+        description: "z. salata, parmezan, špargla",
+    },
+    {
+        id: 4,
+        title: "Miks salata",
+        price: "270RSD",
+        img: "assets/img/salata4.jpg",
+        description: "krastavci, mladi luk, sir",
+    },
+    {
+        id: 5,
+        title: "Zest ručak",
+        price: "800RSD",
+        img: "assets/img/gjelo5.jpg",
+        description: "piletina, povrće",
+    },
+    {
+        id: 6,
+        title: "Kaša",
+        price: "290RSD",
+        img: "assets/img/dorucak6.jpg",
+        description: "ovsena kaša, voće",
+    },
+]
+var saladsMenuDiv = document.querySelector("#saladsMenu");
+
+//deserts
+const desertsMenuItems = [
+    {
+        id: 1,
+        title: "Karamel kolač",
+        price: "450RSD",
+        img: "assets/img/dezert1.jpg",
+        description: "karamela, čokolada",
+    },
+    {
+        id: 2,
+        title: "Red velvet",
+        price: "560RSD",
+        img: "assets/img/dezert2.jpg",
+        description: "fil od jagoda, preliv od bele cokolade",
+    },
+    {
+        id: 3,
+        title: "Američke palačinke",
+        price: "390RSD",
+        img: "assets/img/dezert3.jpg",
+        description: "testo za palačnke, javorov sirup",
+    },
+    {
+        id: 4,
+        title: "Čoko vafl",
+        price: "640RSD",
+        img: "assets/img/dezert4.jpg",
+        description: "sladoled od vanile, valf, čokoladni preliv",
+    },
+    {
+        id: 5,
+        title: "Sladoled vanila",
+        price: "250RSD",
+        img: "assets/img/dezert5.jpg",
+        description: "sladoled vanila, čokolada",
+    },
+    {
+        id: 6,
+        title: "Sladoled jagoda",
+        price: "290RSD",
+        img: "assets/img/dezert6.jpg",
+        description: "sladoled jagoda, jagoda",
+    },
+]
+var desertsMenuDiv = document.querySelector("#desertsMenu");
+
+
+function menuCourses(menuDiv, menuItems){
+    window.addEventListener("DOMContentLoaded", () => {
+        let displayMenu = menuItems.map(item => {
+            return `<div class="menu-item d-flex flex-direction-column w-30">
+            <img src=${item.img} alt=${item.title} class="img-fluid"/>
+            <div>
+                <div class="d-flex justify-content-between ">
+                    <h3>${item.title}</h3>
+                    <p>${item.price}</p>
+                </div>
+                <p>${item.description}</p>
+            </div>
+        </div>`;
+        })
+        displayMenu = displayMenu.join('');
+        menuDiv.innerHTML = displayMenu 
+        console.log(displayMenu)
+    })
+}
+
+menuCourses(breakfastMenuDiv, breakfastMenuItems);
+menuCourses(mainCoursesMenuDiv, MainCoursesMenuItems);
+menuCourses(saladsMenuDiv, saladsMenuItems);
+menuCourses(desertsMenuDiv, desertsMenuItems);
 
 }
 
