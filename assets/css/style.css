@@ -371,6 +371,10 @@ nav{
     text-align: center;
     margin-bottom: 5vh;
 }
+/*izdvajamo*/
+#topDishes{
+    overflow: hidden;
+}
 /* menu */ 
 .menu-item{
     width: 30%;
@@ -610,12 +614,6 @@ nav{
     }
 }
 
-/* gallery */
-/* .img-fluid{
-    max-width: 95%;
-    height: fit-content;
-}  */
-
 #landing-page-icons{
 position: absolute;
 bottom: 5px;
@@ -631,25 +629,6 @@ border-radius: 10px;
     color: black !important;
     top: unset !important;
 }
-/* .swiper-grid-column>.swiper-wrapper{
-    flex-direction: unset !important;
-    height: 80vh;
-} */
-/* .swiperMenu>.swiper-wrapper>.swiper-slide{
-    height: 35vh;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.swiperMenu>.swiper-wrapper>.swiper-slide:nth-child(5){
-    margin-top: 30px !important;
-} */
-
-/* .swiper-slide-next{
-    margin-top: 0px !important;
-} */
-
 .vl{
     height: inherit;
     border-left: 2px solid;
@@ -686,4 +665,8 @@ border-radius: 10px;
 
 .reservation-result-modal-body-content{
     padding: 10px;
+}
+
+.part{
+    height: 100vh !important;
 }

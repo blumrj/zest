@@ -58,7 +58,6 @@ $(window).on("load", () => {
     $(".burger-line").addClass("nav-light");
 })
 
-
 // navigation
 const navigation = document.getElementsByTagName("nav")[0];
 navigation.classList.add("nav-container", "d-flex", "flex-wrap", "justify-content-between", "align-items-center", "uppercase", "nav-dark");
@@ -104,6 +103,10 @@ for(var i=0; i<navPageLinks.length; i++){
     }
 }
 navigation.appendChild(navUl);
+
+console.log(path)
+console.log(page)
+
 
 //dugme za rezervaciju
 var dugme = document.createElement("input");
@@ -545,8 +548,7 @@ function menuCourses(menuDiv, menuItems){
         </div>`;
         })
         displayMenu = displayMenu.join('');
-        menuDiv.innerHTML = displayMenu 
-        console.log(displayMenu)
+        menuDiv.innerHTML = displayMenu;
     })
 }
 
@@ -554,6 +556,8 @@ menuCourses(breakfastMenuDiv, breakfastMenuItems);
 menuCourses(mainCoursesMenuDiv, MainCoursesMenuItems);
 menuCourses(saladsMenuDiv, saladsMenuItems);
 menuCourses(desertsMenuDiv, desertsMenuItems);
+
+
 
 }
 
