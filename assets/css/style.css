@@ -134,9 +134,9 @@ li .activePage > i{
 .pb-1{
     padding-bottom: 0.5vh;
 }
-/* .mt-7{
+.mt-7{
     margin-top: 7vh;
-} */
+}
 .mt-12{
     margin-top: 12vh;
 }
@@ -669,4 +669,5 @@ border-radius: 10px;
 
 .part{
     height: 100vh !important;
+    display: block;
 }
