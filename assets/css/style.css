@@ -1,8 +1,6 @@
 :root{
-    --gray: #44403d;
-    --bez: #f3f9d2;
-    --green: #505b36;
-    --orange: #fa781a;
+    --gray: #181818;
+    --bez: white;
 }
 *{
     margin: 0;
@@ -21,7 +19,7 @@
     background-color: var(--bez);
 }
 .black{
-    background-color: black;
+    background-color: #0f0f0f;
 }
 .black-text{
     color: black;
@@ -293,7 +291,7 @@ nav{
     color: white;
 }
 .nav-dark{
-    background-color: black;
+    background-color: var(--gray);
     color: var(--bez);
 }
 .nav-active{
@@ -669,5 +667,5 @@ border-radius: 10px;
 
 .part{
     height: 100vh !important;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100) !important;
 }

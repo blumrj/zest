@@ -301,53 +301,41 @@ if(page=="index.html" || page==""){
 
     var swiperWrapper = document.querySelector(".swiper-wrapper");
 
-    var imgPath = ["assets/img/jelodana.png", "assets/img/jelodana.png", "assets/img/jelodana.png"];
-    var imgAlt = ["slika1", "slika2", "slika3"];
-    var dishName = ["NazivJela1", "NazivJela2", "NazivJela3"];
-    var dishDescription = [
-        
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus officia aut, quia voluptatu", 
-    
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus officia aut, quia voluptatu", 
-    
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus officia aut, quia voluptatu"
-    
-    ];
+    const top3Dishes = [
+        {
+            id: 1,
+            img: "assets/img/jelodana.png",
+            name: "Taljata sa pomfritom",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
+        },
+        {
+            id: 2,
+            img: "assets/img/jelodana.png",
+            name: "Bolognese",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
+        },
+        {
+            id: 3,
+            img: "assets/img/jelodana.png",
+            name: "Red velvet",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
+        },
+    ]
 
-    for(let i = 0; i < imgPath.length; i++){
-        // pravljenje swiper slide-a
-        var slide = document.createElement("div");
-        slide.classList.add("swiper-slide", "sadrzaj");
-        
-        //pravljenje slike
-        var img = document.createElement("img");
-        img.src = imgPath[i];
-        img.alt = imgAlt[i];
-        img.classList.add("img-fluid", "w-80");
-
-        // pravljenje div-a za h3 i opis
-        var descriptionDiv = document.createElement("div");
-        //h3
-        var descriptionH3 = document.createElement("h3");
-        descriptionH3.classList.add("p1");
-        descriptionH3.innerHTML = dishName[i];
-        descriptionDiv.appendChild(descriptionH3);
-        //opis
-        var descriptionP = document.createElement("p");
-        descriptionP.classList.add("p1");
-        descriptionP.innerHTML = dishDescription[i];
-        descriptionDiv.appendChild(descriptionP);
-        //button
-        var dishButton = document.createElement("input");
-        dishButton.type = "button";
-        dishButton.classList.add("btn");
-        dishButton.value = "Pogledaj meni";
-        descriptionDiv.appendChild(dishButton);
-
-        slide.appendChild(img);
-        slide.appendChild(descriptionDiv)
-        swiperWrapper.appendChild(slide)
-    }
+    window.addEventListener("DOMContentLoaded", () => {
+            let displayTop3Dishes = top3Dishes.map(dish => {
+                return `<div class="swiper-slide sadrzaj">
+                <img src=${dish.img} alt=${dish.name} class="img-fluid"/>
+                <div>
+                    <h3 class="p1">${dish.name}</h3>
+                    <p class="p1">${dish.description}</p>
+                    <input type="button" class="btn" value="Pogledaj meni" onclick="location.href='meni.html';g"/>
+                </div>
+            </div>`
+            })
+            displayTop3Dishes = displayTop3Dishes.join("");
+            swiperWrapper.innerHTML = displayTop3Dishes;
+    })
 }
 //meni.html
 if(page=="meni.html"){
@@ -564,9 +552,6 @@ menuCourses(breakfastMenuDiv, breakfastMenuItems);
 menuCourses(mainCoursesMenuDiv, MainCoursesMenuItems);
 menuCourses(saladsMenuDiv, saladsMenuItems);
 menuCourses(desertsMenuDiv, desertsMenuItems);
-
-
-
 }
 
 //kontakt 
@@ -677,7 +662,7 @@ for(let i = 0; i<divsContent.length; i++){
     const accordionQuestion = [ "Na kojoj adresi se nalazi Zest?", "Da li postoji parking u blizini?", "Kako napraviti rezervaciju?"];
 
     const accordionAnswer = ["Bulevar kralja Aleksandra 29", "Svim gostima restorana je parking obezbeđen", "Pozovite broj 061 456783 ili rezervišite preko našeg sajta"];
-
+    
     for(let i =0; i < accordionQuestion.length; i++){
         // pravljenje div-a koji ce biti glavi element u kom se nalazi i pitanje i odgovor
         var accordionItem = document.createElement("div");
@@ -699,6 +684,7 @@ for(let i = 0; i<divsContent.length; i++){
     }
 
     var accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+    console.log(accordionItemHeaders)
     
     accordionItemHeaders.forEach(accordionItemHeader => {
         accordionItemHeader.addEventListener("click", () => {
