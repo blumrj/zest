@@ -687,3 +687,6 @@ border-radius: 10px;
     position: relative;
     bottom: 0%; 
 } */
+.part{
+    overflow: hidden;
+}
