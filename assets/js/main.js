@@ -558,10 +558,10 @@ menuCourses(desertsMenuDiv, desertsMenuItems);
 if(page=="kontakt.html"){
 
 //iframe
-
 var iframe = document.getElementsByTagName("iframe")[0];
 var form = document.getElementsByName("contact-form")[0];
 iframe.style.maxHeight =  form.scrollHeight + "px";
+console.log(iframe)
 
 //provera forme
 

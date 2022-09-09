@@ -9,12 +9,6 @@
     list-style: none;
     text-decoration: none;
 }
-.orange{
-    background-color: var(--orange);
-}
-.green{
-    background-color: var(--green);
-}
 .bez{
     background-color: var(--bez);
 }
@@ -47,6 +41,9 @@ body{
     color: var(--gray);
     font-size: 18px;
 }
+.part{
+    overflow: hidden;
+}
 .logo {
     font-size: 30px;
 }
@@ -55,13 +52,6 @@ h1, h2{
 }
 h2{
     font-size: xx-large;
-}
-/* width */
-.w-100{
-    width: 100%;
-}
-.w-90{
-    width: 90%;
 }
 .w-80{
     width: 80%;
@@ -107,27 +97,15 @@ li .activePage > i{
     margin-left: 20px;
 }
 /* margin and padding */ 
-.m1{
-    margin: 3vh auto;
-}
 .mb-1{
     margin-bottom: 1vh;
-}
-.mb-2{
-    margin-bottom: 3vh;
 }
 .ml-1{
     margin-left: 1vw;
 }
-.mr-1{
-    margin-right: 1vw;
-}
 .p1{
     padding-top: 2vh;
     padding-bottom: 2vh;
-}
-.pl-1{
-    padding-left: 1vw;
 }
 .pb-1{
     padding-bottom: 0.5vh;
@@ -151,8 +129,8 @@ li .activePage > i{
     background-color: inherit;
 }
 .btn{
-    color: black;
-    border: solid 1px black;
+    color: var(--gray);
+    border: solid 1px var(--gray);
 }
 .nav-btn{
     color: var(--bez);
@@ -228,9 +206,7 @@ textarea, .input-line{
 }
 iframe{
     width: 40%;
-}
-#formIframe{
-    margin-bottom: 7%;
+    height: inherit;
 }
 /* flex classes */
 .d-flex{
@@ -275,19 +251,19 @@ nav{
     z-index: 10;
 }
 .nav-light{
-    background-color: white;
+    background-color: var(--bez);
 }
 .nav-light a{
-    color: black;
+    color: var(--gray);
 }
 .nav-light .nav-btn{
-    border: 1px solid black;
+    border: 1px solid var(--gray);
     color: black;
 }
 .nav-light .nav-btn:hover{
     border: solid 1px var(--bez);
-    background-color: black;
-    color: white;
+    background-color: var(--gray);
+    color: var(--bez);
 }
 .nav-dark{
     background-color: var(--gray);
@@ -298,7 +274,6 @@ nav{
     transition: all 300ms ease;
     z-index: 2;
 }
-
 /* burger icon*/
 #burger2{
     position: relative;
@@ -335,11 +310,6 @@ nav{
 #burger2.activeBurger .burger-line:nth-child(3){
     transform: rotate(-45deg);
 }
-/* main */
-/* .bg{
-    height: 100vh;
-    position: relative;
-} */
 .video-container {
 	position: absolute;
 	top: 0;
@@ -373,14 +343,28 @@ nav{
 #hero h2{
     font-size: 30px;
 }
+#landing-page-icons{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 25px;
+    background-color: var(--orange);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+/*izdvajamo*/
+#topDishes{
+    overflow: hidden;
+}
 .sadrzaj{
     width: 30%;
     text-align: center;
     margin-bottom: 5vh;
 }
-/*izdvajamo*/
-#topDishes{
-    overflow: hidden;
+.swiperDishes .swiper-button-next,.swiperDishes .swiper-button-prev{
+    bottom: -55% !important;
+    color: black !important;
+    top: unset !important;
 }
 /* menu */ 
 .menu-item{
@@ -443,48 +427,38 @@ nav{
 .footer-item{
     height: fit-content;
 }
+.vl{
+    height: inherit;
+    border-left: 2px solid;
+    border-image: linear-gradient(transparent, rgb(31, 29, 29), transparent) 1;
+    position: absolute;
+    left: 50%;
+    height: 60vh;
+}
+.reservation-result-modal{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    z-index: 10000;
+    border-radius: 5px;
+}
+.reservation-result-modal-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.reservation-result-modal-body-content{
+    padding: 10px;
+}
 /* media queries */
-@media screen and (max-width:1120px){
-    .active-menu{
-        width: 50vw;
-        height: auto;
-    }
-}
-@media screen and (max-width: 992px){
-     nav ul{
-        width: 75%;
-    }
-    #main-menu{
-        flex-direction: column;
-    }
-    .menuSection{
-        width: 80vw;
-        margin-bottom: 3vh;
-        transition: height 0.8s ease-out;
-    }
-    .text-orientation-upright{
-    writing-mode: horizontal-tb;
-    }
-    .menuArticle{
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-    .menuArticle article{
-        flex-direction: column;
-        width: 35%;
-    }
-}
 @media screen and (max-width: 920px){
     #reservation{
         width: 50%;
     }
-    #formIframe{
-        flex-direction: column;
-    }
     #formIframe form{
-        width: auto;
+        width: 100%;
         height: 40vh;
     }
     #formIframe form .input-line, textarea{
@@ -494,12 +468,8 @@ nav{
         text-align: center;
     }
     iframe{
-        margin-top: 10%;
-        width: unset;
-    }
-    .img-div{
-        flex-direction: column;
-        align-content: center;
+        width: 100%;
+        height: 30%;
     }
     .img-fluid{
         width: 100%;
@@ -587,12 +557,6 @@ nav{
     .sadrzaj div{
         width: 90%;
     }
-   .menuArticle p:first-of-type {
-        display: none;
-    }
-    .active-menuArticle{
-        height: auto;
-    }
 }
 @media screen and (max-width: 376px){
     #hero h1{
@@ -627,66 +591,6 @@ nav{
     }
 }
 
-#landing-page-icons{
-position: absolute;
-bottom: 5px;
-left: 5px;
-font-size: 25px;
-background-color: var(--orange);
-padding: 5px 10px;
-border-radius: 10px;
-}
-
-.swiperDishes .swiper-button-next,.swiperDishes .swiper-button-prev{
-    bottom: -55% !important;
-    color: black !important;
-    top: unset !important;
-}
-.vl{
-    height: inherit;
-    border-left: 2px solid;
-    border-image: linear-gradient(transparent, rgb(31, 29, 29), transparent) 1;
-    position: absolute;
-    left: 50%;
-    height: 60vh;
-}
 
 
-.slike-proba{
-    background-color: #fa781a;
-    width: 17vw;
-    height: 60vh;
-}
 
-.slike-proba:nth-child(2){
-    margin-left: 30px;
-}
-
-.reservation-result-modal{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    z-index: 10000;
-    border-radius: 5px;
-}
-.reservation-result-modal-body{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.reservation-result-modal-body-content{
-    padding: 10px;
-}
-
-/* .part{
-    height: 100vh !important;
-    height: calc(var(--vh, 1vh) * 100) !important;
-    height: calc(100vh - 40vh) !important;
-    position: relative;
-    bottom: 0%; 
-} */
-.part{
-    overflow: hidden;
-}
