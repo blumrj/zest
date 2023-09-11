@@ -304,19 +304,19 @@ if(page=="index.html" || page==""){
     const top3Dishes = [
         {
             id: 1,
-            img: "assets/img/jelodana.png",
+            img: "assets/img/taljata.png",
             name: "Taljata sa pomfritom",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
         },
         {
             id: 2,
-            img: "assets/img/jelodana.png",
+            img: "assets/img/bolonjeze.png",
             name: "Bolognese",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
         },
         {
             id: 3,
-            img: "assets/img/jelodana.png",
+            img: "assets/img/red-velvet.png",
             name: "Red velvet",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam nemo distinctio fuga maiores aperiam est similique, vitae quasi facere consectetur hic iste accusamus",
         },
